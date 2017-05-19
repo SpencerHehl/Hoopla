@@ -1,0 +1,50 @@
+.questionHeader{
+  text-align:center;
+  padding-bottom:10px;
+}
+#questionSubmit{
+    text-align:center;
+}
+#facebookButton {
+    text-align:center;
+}
+.pageFragment {
+    text-align:center;
+}
+.rating{
+  color: #a9a9a9;
+}
+ul.rating {
+  display: inline-block;
+}
+.rating li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 1px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+.rating .filled {
+  color: #6600cc;
+}
+.ratingLine li{
+  display: block;
+}
+.ratingLine #ratingIndex {
+  color: #a9a9a9;
+}
+#commentArea {
+  text-align: center;
+  margin: auto;
+}
+#commentBox {
+  border: 1px solid #DBDCE9;
+  margin: auto;
+}
+.tutorialImage {
+  text-align:center;
+}
+.tutorialImage img {
+  max-width:75%;
+}

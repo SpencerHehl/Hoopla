@@ -1,0 +1,13 @@
+<ul class="rating">
+    <li ng-repeat="star in stars" ng-class="star" ng-click="toggle($index)">
+	<ul class="ratingLine">
+            <li>
+	        <span style="font-size:200%">
+                    <i class="icon ion-android-radio-button-off" ng-hide="star.filled"></i>
+	            <i class="icon ion-android-radio-button-on" ng-show="star.filled"></i>
+    	        </span>
+    	    </li>
+	    <li id="ratingIndex">{{$index}}</li>
+	</ul>
+    </li>
+</ul>

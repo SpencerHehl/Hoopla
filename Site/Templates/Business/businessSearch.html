@@ -1,0 +1,12 @@
+﻿<div>
+  <ion-content class="padding">
+    <label class="item item-input item-button-right">
+        <i class="button button-clear icon ion-search"></i>
+        <input type="search" placeholder="Search" ng-model="searchString">
+    </label>
+    <br />
+    <ion-list>
+        <ion-radio ng-click="setBusinessInfo(businessName)" ng-repeat="businessName in businesses | filter:searchString">{{businessName}}</ion-radio>
+    </ion-list>
+  </ion-content>
+</div>
