@@ -15,7 +15,7 @@
 
     var setBusiness = function (bId) {
         console.log('Requesting business information...');
-        $http.get('http://hooplareviews.com/API/survey/'+bId).then(getBusinessSuccess, getBusinessFail);
+        $http.get('http://hooplareviews.com/API/business/getbusiness/'+bId).then(getBusinessSuccess, getBusinessFail);
 	    return business.promise;
     };
 

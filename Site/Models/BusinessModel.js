@@ -10,7 +10,10 @@ var Business = new Schema({
     PhoneNumber: String,
     Emaill: String,
     URL: String,
-    LatLon: String,
+    LatLon: {
+        Lat: String,
+        Lon: String
+    },
     Questions: [
         {
             QuestionNum: Number,
