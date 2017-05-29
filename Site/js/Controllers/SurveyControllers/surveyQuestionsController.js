@@ -4,26 +4,26 @@
     var businessID = $stateParams.businessID;
     var business;
     businessInfoService.setBusiness(businessID).then(function(data){
-	$scope.questions = data.questions;
-	business = data.information;
-	businessInfoService.setBusinessInformation(business);
-    var businessName;
-    //var queryString = businessInfoService.getBusinessInformation().querystring.split(' ').join('+');
-    if (business.fullname == "") {
-	businessName = business.name;
-    } else {
-	businessName = business.fullname;
-    }
-    var businessAddress = business.address;
-    var fullString = businessName + " " + businessAddress;
-    var queryString = fullString.split(' ').join('+');
-    var businessLocation = business.latlong;
-    $ionicModal.fromTemplateUrl('Templates/Modals/respondantForm.html', {
-	id: '1',
-	scope: $scope,
-	animation: 'slide-in-up'
+		$scope.questions = data.Questions;
+		business = data;
+		businessInfoService.setBusinessInformation(business);
+    	var businessName;
+    	//var queryString = businessInfoService.getBusinessInformation().querystring.split(' ').join('+');
+    	if (business.FullName == "") {
+			businessName = business.Name;
+    	} else {
+			businessName = business.FullName;
+    	}
+    	var businessAddress = business.Address;
+    	var fullString = businessName + " " + businessAddress;
+    	var queryString = fullString.split(' ').join('+');
+    	var businessLocation = business.LatLon;
+    	$ionicModal.fromTemplateUrl('Templates/Modals/respondantForm.html', {
+		id: '1',
+		scope: $scope,
+		animation: 'slide-in-up'
     }).then(function(infomodal) {
-	$scope.infomodal = infomodal;
+		$scope.infomodal = infomodal;
     });
 
     $ionicModal.fromTemplateUrl('Templates/Modals/tutorialModal.html', {
@@ -129,12 +129,12 @@
     };
 
     var answerCompile = function () {
-	businessAnswerService.setRespondant($scope.respondant);
-        businessAnswerService.setAnswers($scope.choice);
-	businessAnswerService.submitSurvey().then(function(data){
-            $state.go('surveyReward');
-	});
-    };
+		businessAnswerService.setRespondant($scope.respondant);
+		businessAnswerService.setAnswers($scope.choice);
+		businessAnswerService.submitSurvey().then(function(data){
+				$state.go('surveyReward');
+		});
+	};
     })
 
 })

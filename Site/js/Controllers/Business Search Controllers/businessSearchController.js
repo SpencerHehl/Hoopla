@@ -7,9 +7,7 @@
     $scope.setBusinessInfo = function (businessName) {
         var business = businessName.toLocaleLowerCase();
         businessInfoService.setBusiness(business).then(function(data){
-	    businessInfoService.setBusinessQuestions(data.questions);
-	    businessInfoService.setBusinessInformation(data.information);
-	    $state.go("surveyQuestions");
-	});
+	        $state.go("surveyQuestions");
+	    });
     };
 })

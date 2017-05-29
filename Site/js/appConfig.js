@@ -24,7 +24,7 @@
     })
     .state('surveyReward', {
         url: '/survey/reward',
-	controller: 'surveyRewardController',
+	    controller: 'surveyRewardController',
         templateUrl: 'Templates/SurveyPages/surveyReward.html'
     })
 })
