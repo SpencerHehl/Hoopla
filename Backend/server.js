@@ -56,7 +56,7 @@ router.post('/survey/submit', function(req, res){
 
 });
 
-app.use('/API', router);
+app.use('/api', router);
 
 app.listen('3000');
 console.log('Server running on 3000');
